@@ -42,7 +42,7 @@ function play() {
 
         svgSize = document.getElementById('graph').getBoundingClientRect();
 
-        
+
         var force = d3.layout.force()
         .nodes(d3.values(nodes))
         .links(links)
@@ -63,7 +63,7 @@ function play() {
 
         var node = svg.selectAll(".node")
             .data(force.nodes())
-            .enter().append("g")     // Ho eliminato una funzione
+            .enter().append("g")
             .attr("class", function(d) {
                 if (d.group != undefined) {
                     return "node" + d.group.replace(/\s+/g, '').replace(/'/, '');}
@@ -83,7 +83,7 @@ function play() {
             })
             .attr("r", 30)
             .style("fill",function(d) {
-                return "url(#image-" + d.id +")"; //Immagine nera
+                return "url(#image-" + d.id +")"; 
             })
             .style("stroke", "#fff")
             .style("stroke-width", "1px");
