@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700');
+
+html {
+    height: calc(100% - 3px);
+}
+body {
+    background: linear-gradient(
+          rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.7)
+        ), url("../data/images/sfondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    margin: 0;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.link {
+    fill: black;
+    stroke: #666;
+    stroke-width: 2px;
+}
+
+.node rect {
+    fill: #ccc;
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.text {
+    font: 30px sans-serif;
+    pointer-events: none;
+}

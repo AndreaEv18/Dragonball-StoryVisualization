@@ -1,7 +1,7 @@
 {
     "nodes": [
         {
-          "saga": "Saiyan Saga",
+            "saga": "Saiyan Saga",
             "name": "Goku",
             "id": 0
         },
@@ -29,22 +29,22 @@
             "id": 4
         },
         {
-          "type": "Super Saiyan",
-          "saga": "Cell Games Saga",
-          "name": "Vegeta SSJ",
-          "id": 5
+            "type": "Super Saiyan",
+            "saga": "Cell Games Saga",
+            "name": "Vegeta SSJ",
+            "id": 5
         },
         {
-          "type": "Super Saiyan",
-          "saga": "Majin Buu Saga",
-          "name": "Vegeta SSJ2",
-          "id": 6
+            "type": "Super Saiyan",
+            "saga": "Majin Buu Saga",
+            "name": "Vegeta SSJ2",
+            "id": 6
         },
         {
-          "type": "Super Saiyan",
-          "saga": "Majin Buu Saga",
-          "name": "Majin Vegeta",
-          "id": 7
+            "type": "Super Saiyan",
+            "saga": "Majin Buu Saga",
+            "name": "Majin Vegeta",
+            "id": 7
         },
         {
             "type": "Fusion",
@@ -59,57 +59,51 @@
             "id": 9
         }
     ],
-
     "links": [
         {
             "relation": "transformation",
             "source": "0",
-            "target": "1",
+            "target": "1"
         },
         {
             "relation": "transformation",
             "source": "0",
-            "target": "2",
+            "target": "2"
         },
         {
             "relation": "transformation",
             "source": "0",
-            "target": "3",
+            "target": "3"
         },
         {
             "relation": "transformation",
             "source": "0",
-            "target": "8",
-        },
-        {
-            "relation": "transformation",
-            "source": "0",
-            "target": "8",
+            "target": "8"
         },
         {
             "relation": "transformation",
             "source": "8",
-            "target": "9",
+            "target": "9"
         },
         {
             "relation": "transformation",
             "source": "4",
-            "target": "8",
+            "target": "8"
         },
         {
             "relation": "transformation",
             "source": "4",
-            "target": "5",
+            "target": "5"
         },
         {
             "relation": "transformation",
             "source": "4",
-            "target": "6",
+            "target": "6"
         },
         {
             "relation": "transformation",
             "source": "4",
-            "target": "7",
+            "target": "7"
         }
     ]
 }
