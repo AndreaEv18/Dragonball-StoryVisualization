@@ -43,7 +43,7 @@ function play() {
                 .attr('height', 1)
                 .attr("patternContentUnits", "objectBoundingBox")
                 .append('svg:image')
-                .attr('xlink:href', "../data/images/0.png") //Inserisci image a caso
+                .attr('xlink:href', "../data/imgs/" + element.name + ".jpg") //Inserisci image a caso
                 .attr('x', 0)
                 .attr('y', 0)
                 .attr('width', 1)
