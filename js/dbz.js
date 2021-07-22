@@ -1,28 +1,20 @@
 var links = [];
 var nodes = [];
 var s, t = null;
-var legend_height = 40;
-var statusSelector = null;
-var status = null;
-var running = false;
 var svgSize = null;
 
 function play() {
 
     d3.json("../data/DBZ_start.json", function(data) {
 
-        console.log("Sono dentro al file json");
         nodes = data["nodes"];
         links = data["links"];
 
-        // Formatting the Json
-        // Converts source and target from String to Int
         links.forEach(link => {
             link.source = parseInt(link.source);
             link.target = parseInt(link.target);
         });
 
-        //Array of characters' relations
         var notUniqueRelations = [];
         links.forEach(elem => {
             notUniqueRelations.push(elem.relation);
@@ -30,9 +22,6 @@ function play() {
 
         var relations = deleteDuplicates(notUniqueRelations);
 
-
-
-        // Create the graph
         var svg = d3.select("body").append("svg")
             .attr("id", "graph")
         var defs = svg.append('svg:defs');
@@ -43,7 +32,7 @@ function play() {
                 .attr('height', 1)
                 .attr("patternContentUnits", "objectBoundingBox")
                 .append('svg:image')
-                .attr('xlink:href', "../data/imgs/" + element.name + ".jpg") //Inserisci image a caso
+                .attr('xlink:href', "../data/imgs/" + element.name + ".jpg")
                 .attr('x', 0)
                 .attr('y', 0)
                 .attr('width', 1)
@@ -53,7 +42,7 @@ function play() {
 
         svgSize = document.getElementById('graph').getBoundingClientRect();
 
-        // Force layout
+        
         var force = d3.layout.force()
         .nodes(d3.values(nodes))
         .links(links)
@@ -92,7 +81,7 @@ function play() {
             .attr("class", function(d) {
                 return d.status;
             })
-            .attr("r", 25)
+            .attr("r", 30)
             .style("fill",function(d) {
                 return "url(#image-" + d.id +")"; //Immagine nera
             })
@@ -211,16 +200,10 @@ function relationMouseout() {
         .style("opacity", "1");
 }
 
-
-
-
-
-// Deletes duplicates in an array
 function deleteDuplicates(array) {
     return array.filter(function(item, pos) {
         return array.indexOf(item) == pos && item != undefined;
     })
 }
 
-console.log("ciao");
 play();
